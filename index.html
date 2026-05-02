@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cordillera Tourism</title>
+  <style>
+    body { margin:0; font-family:'Poppins',sans-serif; }
+
+    /* Sections */
+    section { display:none; min-height:100vh; padding:2rem 2rem 3rem; box-sizing:border-box; background:#7b6bf8; color:#fff; }
+    section.active { display:block; }
+    section h2 { margin-top:0; letter-spacing:0.02em; }
+    section .content-box { max-width:900px; margin-top:1.5rem; background:rgba(255,255,255,0.12); padding:1.8rem; border-radius:20px; box-shadow:0 20px 60px rgba(0,0,0,0.18); }
+    section .content-box ul { padding-left:1.25rem; }
+    section .content-box li { margin:0.7rem 0; }
+
+    /* Navbar design */
+    .navbar { display:flex; justify-content:space-between; align-items:center; padding:1rem 2rem; background:#4b4ce0; color:#fff; position:sticky; top:0; z-index:10; }
+    .logo { font-size:1.1rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; }
+    .nav-links { list-style:none; display:flex; gap:1.5rem; margin:0; padding:0; }
+    .nav-links a { color:#fff; text-decoration:none; cursor:pointer; font-weight:600; }
+
+    /* Homepage design */
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #6a5acd, #7b68ee);
+  color: white;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+}
+
+.nav-links a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  position: relative;
+}
+
+.hero h1 {
+  font-size: 36px;
+  font-style: italic;
+}
+
+.hero p {
+  margin-top: 10px;
+  text-decoration: underline;
+}
+
+/* BUTTON */
+.btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: white;
+  color: black;
+  border-radius: 20px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* SHAPES */
+.circle {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: #8b3a3a;
+  border-radius: 50%;
+  top: 120px;
+  left: 30%;
+  opacity: 0.6;
+}
+
+.blob {
+  position: absolute;
+  width: 250px;
+  height: 200px;
+  background: #ff6b6b;
+  border-radius: 50%;
+  top: 0;
+  right: 0;
+  transform: rotate(30deg);
+  opacity: 0.7;
+}
+
+/* DESTINATIONS */
+.section {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.card {
+  text-align: center;
+  cursor: pointer;
+}
+
+.card img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.card p {
+  margin-top: 10px;
+  color: black;
+  font-weight: bold;
+}
+
+/* DETAIL PAGE */
+.detail {
+  display: none;
+  padding: 20px;
+  text-align: center;
+}
+
+.detail img {
+  width: 80%;
+  max-width: 400px;
+  border-radius: 12px;
+}
+
+.back {
+  margin-bottom: 20px;
+  display: inline-block;
+  background: white;
+  color: black;
+  padding: 8px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+
+    /* Top Destinations grid */
+    .top-destinations { padding:2rem; text-align:center; background:rgba(255,255,255,0.1); border-radius:24px; margin-top:2rem; }
+    .top-destinations h2 { color:#fff; text-transform:uppercase; letter-spacing:0.2em; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:1.5rem; margin-top:2rem; }
+    .card { background:rgba(255,255,255,0.15); border-radius:24px; overflow:hidden; transition:transform 0.3s ease, box-shadow 0.3s ease; text-align:center; border:1px solid rgba(255,255,255,0.18); }
+    .card img { width:100%; height:220px; object-fit:cover; }
+    .card h3 { padding:1rem 0; font-size:1.1rem; color:#fff; }
+    .card:hover { transform:translateY(-5px); box-shadow:0 20px 40px rgba(0,0,0,0.25); }
+
+    /* Destination list */
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #8fa1c7;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 40px;
+  background: linear-gradient(to right, #6a5acd, #7b68ee);
+  color: white;
+}
+
+.nav-links a {
+  margin-left: 20px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* HEADER ROW */
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background: #aab6d6;
+  font-style: italic;
+}
+
+/* LIST */
+.list {
+  padding: 10px;
+}
+
+/* ITEM */
+.item {
+  display: flex;
+  gap: 15px;
+  padding: 15px;
+  background: #aab6d6;
+  margin-bottom: 10px;
+  border-bottom: 4px solid #6a5acd;
+}
+
+/* IMAGE */
+.item img {
+  width: 100px;
+  height: 80px;
+  object-fit: cover;
+}
+
+/* TEXT */
+.text h3 {
+  margin-bottom: 5px;
+}
+
+.text p {
+  color: #333;
+}
+
+
+    /* Province pages */
+    .province { background-size:cover; background-position:center; color:#fff; position:relative; }
+    .province::after { content:''; position:absolute; inset:0; background:linear-gradient(180deg,rgba(0,0,0,0.35),rgba(0,0,0,0.65)); pointer-events:none; }
+    .province > * { position:relative; }
+    .province h2 { font-size:2.4rem; }
+    .province p, .province .details { max-width:760px; background:rgba(255,255,255,0.12); padding:1.6rem; border-radius:20px; backdrop-filter:blur(8px); }
+    .province .details { margin-top:1rem; }
+    .back { display:inline-block; margin-bottom:1.5rem; color:#ffd369; cursor:pointer; font-weight:700; }
+
+    /* Footer */
+    footer { background:#2c3e50; color:#fff; text-align:center; padding:1rem; }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Cordillera</div>
+      <ul class="nav-links">
+        <li><a onclick="showPage('home')">Home</a></li>
+        <li><a onclick="showPage('destination')">Destination</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Home Page -->
+  <section id="home" class="hero active">
+    <h1>Discover the Rich Culture and Beautiful Cordillera</h1>
+    <p>Explore mountains, rice terraces, and rich indigenous culture.</p>
+    <span class="btn" onclick="showPage('destination')">Explore Destination</span>
+
+    <div class="top-destinations">
+      <h2>Top Destination</h2>
+      <div class="grid">
+        <div class="card">
+          <img src="https://i0.wp.com/joansfootprints.com/wp-content/uploads/2023/04/cover-4-scaled.jpg?fit=2560%2C1440&ssl=1" alt="Sagada">
+          <h3>Sagada, Mt. Province</h3>
+        </div>
+        <div class="card">
+          <img src="https://wallpaperaccess.com/full/10804552.jpg" alt="Baguio">
+          <h3>Baguio City</h3>
+        </div>
+        <div class="card">
+          <img src="https://outoftownblog.com/wp-content/uploads/2023/12/Rice-Terraces-in-Banaue-Ifugao.jpg" alt="Ifugao">
+          <h3>Ifugao</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Destination List -->
+    <section id="destination">
+    <h2>Destinations</h2>
+
+  <div class="item">
+    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiTHi8ZUcS76UXBtQuhyLusnmcQ_DcstpAlYUXETyoGm9HDJ5ut0rQYg6FyvF2C4MikvXVk5SBKPLNpt93rj85RykJNR2p3r95Uau4zDrJkZboUCNcX8HgBSKnKvoRcVjSsepw3HAlsxjSOCcZFLkH4ogNsSJzMqapex6i35hdCkaw5izhxfYLhE6ti/s1280/APAYAO%20PROVINCE%20TRAVEL%20GUIDE.png">
+    <div class="apayao">
+      <h3 onclick="showPage('apayao')">Apayao — The Last Ecological Frontier</h3>
+      <p>Often called the “last frontier of the Cordilleras,” Apayao is rich in untouched nature and indigenous life.</p>
+    </div>
+  </div>
+
+  <div class="item">
+    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEicVTOiRBm3i7kv01-ruSaX5ENJ5VMzF-73G_VTyr0U0sjCRZsb3s7oo-FBMFeGR21EPLtvAb6mllYv0IAoa7oY8zlJYvj6hdh2INrc6ILAK-nNlasumDuAW0dd6KDTrFWWbKR05zpdJ5rLNRnJ0Ksha288si0VVxgcNN8kPVac4tQE4W2D86NcCmpw/s1280/ABRA%20PROVINCE%20GUIDE.png">
+    <div class="abra">
+    <h3 onclick="showPage('abra')">Abra — Heritage, Weaving, and Quiet Landscapes</h3>
+      <p>Located in the Abra, this underrated destination offers a peaceful cultural escape rooted in Ilocano traditions.</p>
+    </div>
+  </div>
+
+  <div class="item">
+    <img src="https://tse3.mm.bing.net/th/id/OIP.DjrlXbajZ5JqTcfp8RAp_AHaEK?pid=Api&P=0&h=180">
+    <div class="kalinga">
+      <h3 onclick="showPage('kalinga')">Kalinga — Living Traditions and Sacred Ink</h3>
+      <p>Hidden in the mountains of Kalinga, this destination offers a deep connection to indigenous identity.</p>
+    </div>
+  </div>
+
+  <div class="item">
+    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgG63-5nb2WhJlT1s32pfcVzCXPU08YYodkzs6wNe-3I5eStn5xyTHsCligJo_t8qsnLb1D0jSIiWDpSlYo9gk3GXbhUgiRqzKkLsrRq2wUwbFNSQdNjlbg0Aeq1y7YRfXaCbNOt6X-sTGw0uDug5Q25uzmfYlgqPXVfX0nTNMA4i8_I8UtdrGI7VUF/s1280/mountain-province-guide-1.png">
+    <div class="mountain-province">
+      <h3 onclick="showPage('mtprovince')">Mountain Province — Caves, Cliffs, and Culture</h3>
+      <p>Located in the heart of the Cordilleras, Mountain Province is known for dramatic landscapes and rich traditions.</p>
+    </div>
+  </div>
+
+  <div class="item">
+    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjIcTcbs0yCrOz5PRHTMMS0RfYX1jC78Qw_QurzpGQFQmjBBvDFClsmsWKoryvUh9X-EK6N1q9PtISFFF01wP73NCwgkazIEIjakY2iqJnWKJD61voZZp9KLxQxMk2E83VcfM5crABW93XDVk21uqAc_ckr78f67c9Tn1NCsj3y7G3ptjqZNCmhHz6W/s1280/ifugao-province-guide.png">
+    <div class="ifugao">
+      <h3 onclick="showPage('ifugao')">Ifugao — Rice Terraces and Living Traditions</h3>
+      <p>Home to the world-famous Banaue Rice Terraces, Ifugao is a UNESCO-recognized cultural treasure.</p>
+    </div>
+  </div>
+
+  <div class="item">
+    <img src="https://tse3.mm.bing.net/th/id/OIP.9h0oGBH9rAIFRKYKPg4eoQHaE7?pid=Api&P=0&h=180">
+    <div class="benguet">
+      <h3 onclick="showPage('benguet')">Benguet — Highlands, Markets and Mountain Culture</h3>
+      <p>Just north of Baguio, Benguet blends indigenous traditions with cool-climate living.</p>
+    </div>
+  </div>
+
+  <div class="item">
+    <img src="https://i.ytimg.com/vi/2W4JtqxFhn0/maxresdefault.jpg">
+    <div class="baguio">
+      <h3 onclick="showPage('baguio')">Baguio — The Summer Capital of the Philippines</h3>
+      <p>Perched in the cool highlands of Baguio, this vibrant city blends culture, creativity, and nature.</p>
+    </div>
+  </div>
+
+</div>
+  </section>
+
+  <!-- Province Pages -->
+  <section id="apayao" class="province" style="background-image:url('attachments/vgJTjyPdgjSnV47v4HYhq.png')">
+    <span class="back" onclick="showPage('destination')">&larr; Destination</span>
+    <h2>Apayao — The Last Ecological Frontier</h2>
+    <p>Apayao is rich in untouched nature and indigenous life. It remains one of the most pristine areas of the Cordilleras, with dense forests, winding rivers, and vibrant Isnag culture.</p>
+    <div class="details">
+      <ul>
+        <li>Untouched Nature — Vast forests, rivers, and rich biodiversity</li>
+        <li>Indigenous Culture — Home of the Isnag people and preserved traditions</li>
+        <li>Eco-Adventure — River exploration, wildlife encounters, and off-grid travel</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="abra" class="province" style="background-image:url('attachments/8z2oBtyqbGF9nWgSYJ7Rq.png')">
+    <span class="back" onclick="showPage('destination')">&larr; Destination</span>
+    <h2>Abra — Heritage, Weaving, and Quiet Landscapes</h2>
+    <p>Abra is known for its rich cultural heritage and peaceful rural landscapes. The province is famous for its abel weaving, historic churches, and serene highland villages.</p>
+    <div class="details">
+      <ul>
+        <li>Traditional Weaving — Home of abel textiles and skilled artisans</li>
+        <li>Cultural Heritage — Historic churches and ancestral houses</li>
+        <li>Peaceful Landscapes — Rivers, mountains, and uncrowded destinations</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="kalinga" class="province" style="background-image:url('attachments/kalinga-background.jpg')">
+    <span class="back" onclick="showPage('destination')">&larr; Destination</span>
+    <h2>Kalinga — Living Traditions and Sacred Ink</h2>
+    <p>Kalinga is known for its strong indigenous identity and ancient traditions. It is home to communities that continue to practice customs passed down through generations.</p>
+    <div class="details">
+      <ul>
+        <li>Traditional Tattoos — Ancient batok art done by hand</li>
+        <li>Living Culture — Strong indigenous traditions and community life</li>
+        <li>Mountain Landscapes — Remote villages and scenic highlands</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="mtprovince" class="province" style="background-image:url('attachments/mtprovince-background.jpg')">
+    <span class="back" onclick="showPage('destination')">&larr; Destination</span>
+    <h2>Mountain Province — Caves, Cliffs, and Culture</h2>
+    <p>Mountain Province is known for its dramatic landscapes and deep-rooted indigenous traditions. The area features famous sites like the Sagada Hanging Coffins and breathtaking mountain views.</p>
+    <div class="details">
+      <ul>
+        <li>Cultural Heritage — Home to the famous hanging coffins tradition</li>
+        <li>Natural Wonders — Caves, mountains, and scenic viewpoints</li>
+        <li>Indigenous Traditions — Living customs preserved through generations</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="ifugao" class="province" style="background-image:url('attachments/ifugao-background.jpg')">
+    <span class="back" onclick="showPage('destination')">&larr; Destination</span>
+    <h2>Ifugao — Rice Terraces and Living Traditions</h2>
+    <p>Ifugao is home to one of the most iconic cultural landscapes in the world. The Banaue Rice Terraces were carved over 2,000 years ago and remain a living heritage today.</p>
+    <div class="details">
+      <ul>
+        <li>Rice Terraces — Ancient hand-carved landscapes still in use</li>
+        <li>Living Culture — Traditions and rituals preserved over centuries</li>
+        <li>Cultural Trekking — Immersive village and farming experiences</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="benguet" class="province" style="background-image:url('attachments/benguet-background.jpg')">
+    <span class="back" onclick="showPage('destination')">&larr; Destination</span>
+    <h2>Benguet — Highlands, Markets, and Mountain Culture</h2>
+    <p>Benguet is known for its cool climate, agricultural abundance, and vibrant highland culture. It serves as the vegetable basket of Northern Luzon and is home to diverse indigenous communities.</p>
+    <div class="details">
+      <ul>
+        <li>Agricultural Hub — Major source of vegetables and strawberries</li>
+        <li>Highland Scenery — Mountains, farms, and cool weather</li>
+        <li>Cultural Diversity — Home to Ibaloi and Kankanaey communities</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="baguio" class="province" style="background-image:url('attachments/baguio-background.jpg')">
+    <span class="back" onclick="showPage('destination')">&larr; Destination</span>
+    <h2>Baguio — The Summer Capital of the Philippines</h2>
+    <p>Baguio offers a refreshing escape in the mountains with cool weather and cultural charm. The city is known for its parks, markets, festivals, and creative arts scene.</p>
+    <div class="details">
+      <ul>
+        <li>Festivals — Home of the colorful Panagbenga Festival</li>
+        <li>Creative City — Arts, crafts, and local talent</li>
+        <li>Cool Climate — A refreshing mountain getaway</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Cordillera Tourism</p>
+  </footer>
+
+  <script>
+    function showPage(pageId) {
+      document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
+      var section = document.getElementById(pageId);
+      if (section) {
+        section.classList.add('active');
+      }
+    }
+  </script>
+</body>
+</html>
